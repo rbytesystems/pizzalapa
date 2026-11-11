@@ -1,0 +1,495 @@
+:root {
+  --vermelho: #c81925;
+  --vermelho2: #99121c;
+  --amarelo: #ffc928;
+  --fundo: #f4f5f7;
+  --texto: #292929;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+/* CABEÇALHO */
+
+header {
+  background: var(--vermelho);
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--amarelo);
+}
+
+header button,
+.btn-yellow {
+  background: var(--amarelo);
+  color: #222;
+  border: 0;
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BANNER */
+
+.banner {
+  background: linear-gradient(120deg, #a80e19, #e52b32);
+  color: white;
+  padding: 45px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.banner h1 {
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+
+.banner p {
+  font-size: 17px;
+  max-width: 570px;
+  line-height: 1.5;
+}
+
+.selo {
+  background: var(--amarelo);
+  color: #333;
+  padding: 22px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CONTEÚDO */
+
+.container {
+  max-width: 1200px;
+  margin: 25px auto;
+  padding: 0 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px #0000000c;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--vermelho);
+}
+
+/* GRADE DE PRODUTOS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* BOTÕES */
+
+.btn {
+  background: var(--vermelho);
+  color: white;
+  border: 0;
+  padding: 11px 16px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--vermelho2);
+}
+
+.btn-light {
+  background: #eee;
+  color: #333;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 7px;
+}
+
+/* CAMPOS */
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin: 6px 0 13px;
+  font: inherit;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* PAINEL ADMINISTRATIVO */
+
+.stat {
+  border-left: 5px solid var(--amarelo);
+  background: white;
+  padding: 18px;
+  border-radius: 9px;
+}
+
+.stat strong {
+  font-size: 27px;
+  display: block;
+  color: var(--vermelho);
+}
+
+/* NAVEGAÇÃO */
+
+nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+nav button {
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 7px;
+  background: #eee;
+  font-weight: bold;
+}
+
+nav button.active {
+  background: var(--vermelho);
+  color: white;
+}
+
+/* EXIBIÇÃO */
+
+.hidden,
+.oculto {
+  display: none !important;
+}
+
+/* TABELAS */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  background: #fff2d0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* STATUS */
+
+.status {
+  display: inline-block;
+  padding: 6px 9px;
+  background: #fff1c5;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ETAPAS DO PEDIDO */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 9px;
+}
+
+.step {
+  padding: 12px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.step.done {
+  background: #fff0bd;
+  border: 1px solid #e4b82e;
+}
+
+.step.current {
+  background: var(--vermelho);
+  color: white;
+}
+
+.step b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* PRODUTOS */
+
+.product {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  min-width: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #00000012;
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+}
+
+/* IMAGENS DOS PRODUTOS */
+
+.product .photo {
+    width: 100%;
+    height: 160px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* PREÇO */
+
+.price {
+  color: var(--vermelho);
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* CARROSSEL */
+
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 5px 2px 15px;
+}
+
+.carousel-track .product {
+  flex: 0 0 240px;
+  scroll-snap-align: start;
+}
+
+.carousel-btn:hover {
+  background: var(--vermelho2);
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #0009;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 5;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+/* PAGAMENTO */
+
+#pagamentoCartao,
+#pagamentoPix,
+#pagamentoDinheiro {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fffdf7;
+}
+
+#pagamentoCartao h3 {
+  color: var(--vermelho);
+  margin-top: 0;
+}
+
+#opcaoParcelas {
+  margin-top: 10px;
+}
+
+#pagamentoCartao small {
+  display: block;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* RODAPÉ */
+
+footer {
+  background: #292929;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product .photo {
+    height: 140px;
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+  .banner {
+    padding: 30px 6%;
+  }
+
+  .banner h1 {
+    font-size: 27px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .carousel-track .product {
+    flex: 0 0 78%;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 15px;
+  }
+
+  .product .photo {
+    height: 130px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+/* TELAS PEQUENAS */
+
+@media (max-width: 380px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 5px;
+    text-align: left;
+}
+
+.product-info h3 {
+    width: 100%;
+    margin: 0;
+    min-height: 42px;
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.product-info .price {
+    width: 100%;
+    margin: 0;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.product-info small {
+    width: 100%;
+    display: block;
+    color: #666;
+    text-align: left;
+}
+
+.product-info button {
+    width: 100%;
+    margin-top: 8px;
+}
+}
