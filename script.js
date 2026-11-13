@@ -426,48 +426,35 @@ function aba(id, botao) {
 renderProdutos();
 atualizarTotal();
 function mostrarPagamento() {
-  const pagamento = document.getElementById("pagamento").value;
 
-  const cartao = document.getElementById("pagamentoCartao");
-  const pix = document.getElementById("pagamentoPix");
-  const dinheiro = document.getElementById("pagamentoDinheiro");
-  const parcelas = document.getElementById("opcaoParcelas");
+    const forma = document.getElementById("pagamento").value;
 
-  // Esconde todas as áreas
-  cartao.classList.add("oculto");
-  pix.classList.add("oculto");
-  dinheiro.classList.add("oculto");
-  parcelas.classList.add("oculto");
+    document.getElementById("pagamentoCartao").classList.add("oculto");
+    document.getElementById("pagamentoPix").classList.add("oculto");
+    document.getElementById("pagamentoDinheiro").classList.add("oculto");
 
-  // Cartão de crédito
-  if (pagamento === "credito") {
-    cartao.classList.remove("oculto");
-    parcelas.classList.remove("oculto");
-  }
+    if (forma === "credito" || forma === "debito") {
+        document.getElementById("pagamentoCartao").classList.remove("oculto");
+    }
 
-  // Cartão de débito
-  else if (pagamento === "debito") {
-    cartao.classList.remove("oculto");
-  }
+    if (forma === "pix") {
+        document.getElementById("pagamentoPix").classList.remove("oculto");
+    }
 
-  // Pix
-  else if (pagamento === "pix") {
-    pix.classList.remove("oculto");
-  }
+    if (forma === "dinheiro") {
+        document.getElementById("pagamentoDinheiro").classList.remove("oculto");
+    }
+}
 
-  // Dinheiro
-  else if (pagamento === "dinheiro") {
-    dinheiro.classList.remove("oculto");
-  }
-  function copiarPix() {
+function copiarPix() {
+
     const chave = document.getElementById("chavePix").value;
 
     navigator.clipboard.writeText(chave)
         .then(() => {
-            alert("Chave Pix copiada! Agora faça o pagamento no aplicativo do seu banco.");
+            alert("Chave Pix copiada com sucesso!");
         })
         .catch(() => {
-            alert("Não foi possível copiar. Selecione e copie a chave manualmente.");
+            alert("Não foi possível copiar a chave Pix.");
         });
-}
 }
