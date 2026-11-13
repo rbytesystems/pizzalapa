@@ -102,6 +102,7 @@
       <div class="card" id="secaoPagamento">
 
         <h2>4. Forma de pagamento</h2>
+
         <label>Forma de pagamento</label>
 
         <select id="pagamento" onchange="mostrarPagamento()">
@@ -112,55 +113,49 @@
           <option value="dinheiro">Dinheiro</option>
         </select>
 
+        <!-- CARTÃO -->
         <div id="pagamentoCartao" class="oculto">
-          <h3>Dados do cartão</h3>
-
-          <label>Número do cartão</label>
-          <input type="text" placeholder="Número do cartão" autocomplete="cc-number">
-
-          <label>Nome do titular</label>
-          <input type="text" placeholder="Nome do titular" autocomplete="cc-name">
-
-          <label>Validade</label>
-          <input type="text" placeholder="MM/AA" autocomplete="cc-exp">
-
-          <label>CVV</label>
-          <input type="password" placeholder="CVV" autocomplete="cc-csc">
-
-          <div id="opcaoParcelas" class="oculto">
-            <label>Parcelamento</label>
-            <select>
-              <option value="1">1x</option>
-              <option value="2">2x</option>
-              <option value="3">3x</option>
-            </select>
-          </div>
-
-          <p><small>Simulação visual de pagamento. Para receber pagamentos reais, será necessário integrar um serviço
-              seguro, como o Mercado Pago.</small></p>
+          <p>
+            O pagamento será realizado no momento da entrega,
+            diretamente na máquina de cartão.
+          </p>
         </div>
 
+        <!-- PIX -->
         <div id="pagamentoPix" class="oculto">
           <h3>Pagamento via Pix</h3>
 
-          <p><strong>Destinatário:</strong> Edson Feliciano</p>
+          <p><strong>Destinatário:</strong> Teste de Pagamento Pix</p>
 
           <p><strong>Instituição:</strong> Banco do destinatário</p>
 
           <label>Chave Pix:</label>
-          <input type="text" id="chavePix" value="31 992835225" readonly>
+
+          <input type="text" id="chavePix" value="xx xxxxxxxxx" readonly>
 
           <button type="button" class="btn" onclick="copiarPix()">
             Copiar chave Pix
           </button>
 
-          <p>Após realizar o pagamento, envie o comprovante ao estabelecimento.</p>
+          <p>
+            Após realizar o pagamento, envie o comprovante
+            ao estabelecimento.
+          </p>
         </div>
 
+        <!-- DINHEIRO -->
         <div id="pagamentoDinheiro" class="oculto">
-          <p>Pagamento selecionado: Dinheiro.</p>
+          <p>Pagamento em dinheiro no momento da entrega.</p>
         </div>
-      </div>
+
+        <p>
+          <small>
+            Simulação visual de pagamento. Para receber pagamentos
+            reais e confirmar transações automaticamente, será
+            necessária uma integração segura.
+          </small>
+        </p>
+
       </div>
 
       <!-- 5. TOTAL E ENVIO -->
